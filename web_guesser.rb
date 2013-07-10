@@ -5,19 +5,19 @@ number = (1 + rand(99)).to_s
 
 
 get "/" do
-	message = check_guess(params["guess"])
+	message = check_guess(params["guess"], number)
 	puts message
 	erb :index, :locals => {:number => number, :message => message} 
 end
 
- def check_guess(guess)
- 	if number.to_i + 5 <= guess.to_i
+def check_guess(guess, number)
+ 	if guess.to_i > number.to_i  
  		return "TOO HIGH"
- 	elsif number.to_i - 5 >= guess.to_i
+ 	elsif guess.to_i < number.to_i 
  		return "TOO LOW"
- 	elsif number ==  guess.to_i
- 		return "You guessed it correctly"
- 	elsif true
- 	  return "TRUE"
+ 	elsif guess.to_i == number.to_i
+ 		return "RIGHT!!! 
+ 		<img src='http://3steps-tosuccess.com/wp-content/uploads/2013/03/success.jpg' width = "20" height = "60">"
  	end
  end
+ 

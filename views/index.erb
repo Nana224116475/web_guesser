@@ -1,18 +1,44 @@
 <html>
-	<head><head/head>
+
+<style>
+
+	head
+	{
+		font-color: #FFFF00;
+	}
+
+	body {
+		text-align:center;
+		font-family:helvetica,arial;
+		font-size:22px;
+		background-color: #00FFFF;
+    	color:#888;
+    	margin:20px
+    }
+	</style>
+
+	<head>
+		<h1>THIS IS THE GUESSING GAME</h1>
+	</head>
+
 	<body> 
-		<p>
-		  The secret number is <%= number %>
-		</p>
-		<p>
-			Your guess is <%= message %>
-		</p>
+	<p>
+	  Can you guess what the secret number is???
+	</p>
+	
+	<form>
+		<input type='text' name='guess' />
+		<input type='submit' value='Guess!' />
+	</form>
+		
+	<p>
+		Your guess is <%= message %>
+	</p>
+
+	<p>
+		The secret number is <%= number %>
+	</p>
 	</body>
+	
 </html>
-
-<form>
-	<input type='text' name='guess' />
-	<input type='submit' value='Guess!' />
-</form>
-
 
